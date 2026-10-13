@@ -1,0 +1,453 @@
+/* ---------- 1. Colors (change them here only) ---------- */
+:root {
+  --navy: #0f2a47;
+  --navy-dark: #0a1d33;
+  --gold: #c9a227;
+  --gold-light: #f6edcf;
+  --bg: #f4f6fa;
+  --white: #ffffff;
+  --text: #1d2733;
+  --muted: #5f6b7a;
+  --border: #d5dbe5;
+  --error: #b3261e;
+  --error-bg: #fdecea;
+  --success: #1e7a46;
+  --success-bg: #e6f4ec;
+}
+
+/* ---------- 2. Typography (font family and size set once) ---------- */
+body {
+  font-family:
+    "Segoe UI", Tahoma, "Noto Naskh Arabic", "Noto Sans Arabic", Arial,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.15em;
+}
+p {
+  margin: 0 0 12px 0;
+}
+a {
+  color: var(--navy);
+}
+img {
+  border: 0;
+}
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+.muted {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.hidden,
+tr.hidden {
+  display: none;
+}
+
+/* ---------- 3. Layout ---------- */
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.section {
+  padding: 32px 0;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+.grid .card {
+  flex: 1 1 260px;
+  margin: 0 8px 16px 8px;
+}
+
+/* ---------- 4. Header and navigation ---------- */
+#site-header {
+  background: var(--navy);
+  color: var(--white);
+  border-bottom: 4px solid var(--gold);
+}
+#site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--white);
+  padding: 12px 0;
+  margin: 0;
+}
+.logo span {
+  color: var(--gold);
+}
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-list li {
+  margin: 0;
+}
+.nav-list a {
+  display: block;
+  padding: 14px 18px;
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+.nav-list a:hover {
+  background: var(--navy-dark);
+}
+.nav-list a.active {
+  border-bottom-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ---------- 5. Hero ---------- */
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 56px 0;
+  text-align: center;
+}
+.hero h1 {
+  color: var(--white);
+}
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  color: #dbe4f0;
+}
+
+/* ---------- 6. Buttons (one place) ---------- */
+.btn,
+button {
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  background: var(--gold);
+  color: var(--navy-dark);
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 26px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover,
+button:hover {
+  background: #b08d1c;
+  color: var(--white);
+}
+.btn-secondary {
+  background: var(--navy);
+  color: var(--white);
+}
+.btn-secondary:hover {
+  background: var(--navy-dark);
+}
+
+/* ---------- 7. Tables ---------- */
+.table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 720px;
+}
+th {
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 10px;
+  text-align: center;
+}
+td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  vertical-align: middle;
+}
+tbody tr:hover td {
+  background: #f8fafd;
+}
+.car-img {
+  width: 110px;
+  height: auto;
+  border-radius: 6px;
+}
+.info-table {
+  min-width: 0;
+}
+.info-table th,
+.info-table td {
+  text-align: right;
+}
+.details-row td {
+  background: var(--gold-light);
+  text-align: right;
+  border-bottom: 2px solid var(--gold);
+}
+.details-row ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.details-row li {
+  margin: 0 0 0 28px;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* ---------- 8. Form controls (text inputs styled from one place) ---------- */
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+  padding: 16px 20px;
+  margin: 0 0 20px 0;
+}
+legend {
+  font-weight: bold;
+  color: var(--navy);
+  padding: 0 8px;
+}
+.form-row {
+  margin-bottom: 16px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.required-mark {
+  color: var(--error);
+}
+input[type="text"] {
+  font-family: inherit;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  color: var(--text);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+input[type="text"]:focus {
+  outline: 2px solid var(--gold);
+  border-color: var(--gold);
+}
+input.invalid {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+.hint {
+  display: block;
+  color: var(--muted);
+  font-size: 0.88em;
+}
+
+/* ---------- 9. Messages ---------- */
+.error {
+  display: block;
+  color: var(--error);
+  font-size: 0.9em;
+  min-height: 1.2em;
+}
+.msg-error {
+  background: var(--error-bg);
+  color: var(--error);
+  border: 1px solid var(--error);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 14px 0;
+}
+.msg-success {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--success);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 14px 0;
+}
+.placeholder {
+  background: #fff7d6;
+  border: 1px dashed var(--gold);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #6b5300;
+}
+
+/* ---------- 10. Booking summary and result window ---------- */
+.summary-box {
+  background: var(--gold-light);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+.summary-box ul {
+  margin: 6px 0 0 0;
+  padding: 0 20px 0 0;
+}
+#result-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(10, 29, 51, 0.7);
+  z-index: 100;
+  overflow-y: auto;
+  padding: 30px 12px;
+  box-sizing: border-box;
+}
+#result-box {
+  background: var(--white);
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border-top: 6px solid var(--gold);
+  padding: 24px;
+}
+#result-box table {
+  min-width: 0;
+}
+.total-row td {
+  background: var(--navy);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.discount-row td {
+  color: var(--success);
+  font-weight: bold;
+}
+
+/* ---------- 11. Footer ---------- */
+#site-footer {
+  background: var(--navy-dark);
+  color: #c9d4e3;
+  padding: 28px 0 14px 0;
+  margin-top: 30px;
+  border-top: 4px solid var(--gold);
+}
+#site-footer a {
+  color: var(--gold);
+}
+#site-footer h3 {
+  color: var(--white);
+}
+#site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #28405f;
+  margin-top: 16px;
+  padding-top: 12px;
+  font-size: 0.9em;
+}
+
+/* ---------- 12. Responsive ---------- */
+@media (max-width: 700px) {
+  body {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 1.55em;
+  }
+  #site-header .container {
+    justify-content: center;
+  }
+  .nav-list {
+    justify-content: center;
+  }
+  .nav-list a {
+    padding: 10px 12px;
+  }
+  .hero {
+    padding: 36px 0;
+  }
+  .car-img {
+    width: 80px;
+  }
+}
+
+/* ---------- 13. Small helpers ---------- */
+.car-img-wide {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.footer-col {
+  flex: 1 1 240px;
+  margin: 0 8px 12px 8px;
+}
+.mt {
+  margin-top: 16px;
+}
+input.ltr-input {
+  direction: ltr;
+  text-align: right;
+}
+#result-content {
+  margin-bottom: 16px;
+}
